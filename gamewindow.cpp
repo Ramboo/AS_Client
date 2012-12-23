@@ -4,11 +4,13 @@
 #include <QHostAddress>
 #include <QMessageBox>
 #include <QStandardItemModel>
+#include "menuwindow.h"
 
-GameWindow::GameWindow(int languageID, int topicID, int userid, int level, int scores, QWidget *parent) :
+GameWindow::GameWindow(int languageID, int topicID, int userid, int level, int scores, QString addr, QWidget *parent) :
     QMainWindow(parent)
 {
     userID = userid;
+    address = addr;
 
     InitializeRandom();
     MakeInterface();
@@ -50,7 +52,7 @@ void GameWindow::EndGame()
     if(userNameDialog->exec() == QDialog::Accepted)
     {
         client = new QTcpSocket(this);
-        QHostAddress addr("127.0.0.1");
+        QHostAddress addr(address);
         client->connectToHost(addr, 9485);
         QStringList list;
         list.append("INSERT DAMN DATA OF USER WHO ENDED THE GAME");

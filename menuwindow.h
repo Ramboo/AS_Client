@@ -18,7 +18,8 @@ public:
     void EnableSettingsButton();
     QString UserName;
     QString PassWord;
-    
+    QString addr;
+
 private:
     Ui::MenuWindow *ui;
     void SetWindowStyle();

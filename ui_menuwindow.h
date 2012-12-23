@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'menuwindow.ui'
 **
-** Created: Sat 22. Dec 03:47:57 2012
+** Created: Sun 23. Dec 12:40:03 2012
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -34,6 +34,10 @@ public:
     QSpacerItem *horizontalSpacer_7;
     QLabel *label;
     QSpacerItem *horizontalSpacer_8;
+    QSpacerItem *verticalSpacer_4;
+    QHBoxLayout *horizontalLayout_6;
+    QLabel *label_2;
+    QLineEdit *lineEdit;
     QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout_5;
     QLineEdit *Username;
@@ -81,6 +85,26 @@ public:
 
 
         verticalLayout->addLayout(horizontalLayout_4);
+
+        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer_4);
+
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
+        horizontalLayout_6->setContentsMargins(0, -1, -1, 0);
+        label_2 = new QLabel(MenuWindow);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        horizontalLayout_6->addWidget(label_2);
+
+        lineEdit = new QLineEdit(MenuWindow);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+
+        horizontalLayout_6->addWidget(lineEdit);
+
+
+        verticalLayout->addLayout(horizontalLayout_6);
 
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
@@ -175,6 +199,9 @@ public:
     {
         MenuWindow->setWindowTitle(QApplication::translate("MenuWindow", "Menu", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("MenuWindow", "Awesome ships", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("MenuWindow", "IP :", 0, QApplication::UnicodeUTF8));
+        lineEdit->setInputMask(QString());
+        lineEdit->setText(QApplication::translate("MenuWindow", "127.0.0.1", 0, QApplication::UnicodeUTF8));
         startPushButton->setText(QApplication::translate("MenuWindow", "Start", 0, QApplication::UnicodeUTF8));
         settingsPushButton->setText(QApplication::translate("MenuWindow", "Settings", 0, QApplication::UnicodeUTF8));
         quitPushButton->setText(QApplication::translate("MenuWindow", "Quit", 0, QApplication::UnicodeUTF8));

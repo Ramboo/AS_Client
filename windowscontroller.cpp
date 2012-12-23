@@ -46,7 +46,7 @@ void WindowsController::StartGameSlot()
     if (onApplicationStart)
     {
         client = new QTcpSocket(this);
-        QHostAddress addr("127.0.0.1");
+        QHostAddress addr(menuWindow->addr);
         client->connectToHost(addr, 9485);
 
         //User s(menuWindow->UserName, menuWindow->PassWord);
@@ -92,7 +92,8 @@ void WindowsController::StartRead()
                                           settingsWindow->GetTopicID(),
                                           userData.value(0).toInt(),
                                           level,
-                                          userData.value(4).toInt());
+                                          userData.value(4).toInt(),
+                                          menuWindow->addr);
                 connect(gameWindow,SIGNAL(MenuButtonPressed(bool)),this,SLOT(ShowMenuWindow(bool)));
                 gameWindow->show();
                 onApplicationStart=false;

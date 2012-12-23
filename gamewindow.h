@@ -42,7 +42,7 @@ class GameWindow : public QMainWindow
     Q_OBJECT
     
 public:
-    explicit GameWindow(int languageID, int topicID, int userID, int level, int score, QWidget *parent = 0);
+    explicit GameWindow(int languageID, int topicID, int userID, int level, int score, QString addr, QWidget *parent = 0);
 
     ~GameWindow();
 
@@ -67,6 +67,7 @@ private:
     GameController *gameController;
     int userID;
     QTcpSocket *client;
+    QString address;
 
     void paintEvent(QPaintEvent *arg);
 

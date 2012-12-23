@@ -27,6 +27,7 @@ void MenuWindow::GetUserData()
 {
     UserName=ui->Username->text();
     PassWord=ui->Password->text();
+    addr=ui->lineEdit->text();
 }
 
 void MenuWindow::DisableSettingsButton()
