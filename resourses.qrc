@@ -2,10 +2,10 @@
     <qresource prefix="/">
         <file>deepness_1600.jpg</file>
         <file>deepness_1600_small.jpg</file>
-        <file>debug/Images/db2_darker.png</file>
-        <file>debug/Images/dk2_darker.png</file>
         <file>Style.txt</file>
-        <file>debug/Images/plasma_bullet_small.png</file>
-        <file>debug/Images/gun.png</file>
+        <file>db2_darker.png</file>
+        <file>dk2_darker.png</file>
+        <file>gun.png</file>
+        <file>plasma_bullet_small.png</file>
     </qresource>
 </RCC>

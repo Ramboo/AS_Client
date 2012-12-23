@@ -14,7 +14,7 @@ Ship::Ship(QString word,int level)
     normalDamage=ceil((double)totalHP/(double)word.size());
     qDebug()<<(double)totalHP/(double)word.size()<<"  "<<normalDamage;
     this->word=word;
-    ShipImage1 = new QImage(":/debug/Images/dk2_darker.png");
+    ShipImage1 = new QImage("dk2_darker.png");
     shipSize.setWidth(ShipImage1->width());
     shipSize.setHeight(ShipImage1->height());
 }
